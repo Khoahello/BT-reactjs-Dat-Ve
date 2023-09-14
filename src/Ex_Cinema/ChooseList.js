@@ -2,26 +2,28 @@ import React, { Component } from 'react'
 import { REMOVE_CHAIR } from './constant/chairConstant'
 import { connect } from 'react-redux'
 
-export default class ChooseList extends Component {
-  // renderChooseList = () => {
-  //   // let {chooselist} = this.props
-  //   return chooselist.map((item, index) => {
-  //     let {soGhe, gia} = item
-  //     return (
-  //       <tr key={index}>
-  //         <td>{soGhe}</td>
-  //         <td>{gia}</td>
-  //         <td
-  //         style={{color: "red", fontFamily: "fontGame"}}
-  //         // onClick={() => {
-  //         //   this.props.handleRemove(index)
-  //         // }}
-  //         >X</td>
-  //       </tr>
-  //     )
-  //   })
-  // }
-  render() {
+class ChooseList extends Component {
+  renderChooseList = () => {
+      let {chooseList} = this.props
+      // console.log("🤣 ~ file: ChooseList.js:8 ~ ChooseList ~ {chooselist}:", {chooselist})
+      return chooseList.map((item, index) => {
+        let {soGhe, gia} = item
+      return (
+        <tr key={index}>
+          <td>{soGhe}</td>
+          <td>{gia}</td>
+          <td
+          style={{color: "red", fontFamily: "fontGame"}}
+          // onClick={() => {
+            //   this.props.handleRemove(index)
+            // }}
+            >X</td>
+          </tr>
+        )
+      })
+    }
+    render() {
+      console.log("🤣 ~ file: ChooseList.js:8 ~ ChooseList ~ this.props:", this.props)
     return (
       <div className='col-5'>
         <h3 className="bookingMovie">Danh sách ghế bạn chọn</h3>
@@ -43,7 +45,7 @@ export default class ChooseList extends Component {
             <th className='bookingMovie text-lg'>Giá</th>
             <th className='bookingMovie text-lg'>Hủy</th>
           </tr>
-          {/* {this.renderChooseList()} */}
+          {this.renderChooseList()}
           <tr>
             <th className='bookingMovie text-lg'>Tổng</th>
             <td>...</td>
@@ -55,19 +57,20 @@ export default class ChooseList extends Component {
   }
 }
 
-// let mapStateToProps = (state) => {
-//   return { chooselist: state.chairReducer.chooselist };
-// };
-// let mapDispatchToProps = (dispatch) => {
-//   return {
-//     handleRemove: (chair) => {
-//       let action = {
-//         type: REMOVE_CHAIR,
-//         payload: chair
-//       };
-//       dispatch(action);
-//     },
-//   };
-// };
+let mapStateToProps = (state) => {
+  return { chooseList: state.chairReducer.chooseList };
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(ChooseList);
+let mapDispatchToProps = (dispatch) => {
+  return {
+    handleRemove: (chair) => {
+      let action = {
+        type: REMOVE_CHAIR,
+        payload: chair
+      };
+      dispatch(action);
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChooseList);

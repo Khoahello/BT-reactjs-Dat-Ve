@@ -1,4 +1,4 @@
-import { ADD_TO_CHOOSELITST, REMOVE_CHAIR } from "../constant/chairConstant";
+import { ADD_TO_CHOOSELIST, REMOVE_CHAIR } from "../constant/chairConstant";
 import { chairArr } from "../data";
 
 const initialState = {
@@ -8,7 +8,7 @@ const initialState = {
 
 export let chairReducer = (state = initialState, { type, payload }) => {
     switch (type) {
-        case ADD_TO_CHOOSELITST: {
+        case ADD_TO_CHOOSELIST: {
           let cloneChooseList = [...state.chooseList]
           let newChair = {...payload}
           cloneChooseList.push(newChair)

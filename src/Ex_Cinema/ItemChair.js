@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ADD_TO_CHOOSELITST } from './constant/chairConstant';
+import { ADD_TO_CHOOSELIST } from './constant/chairConstant';
 import { connect } from 'react-redux';
 import ChooseList from './ChooseList';
 
@@ -8,7 +8,6 @@ class ItemChair extends Component {
     let { danhSachGhe } = this.props.item;
     return danhSachGhe.map((item, index) => {
       let { soGhe, gia, daDat } = item;
-      <ChooseList item={{item}}/>
       return (
         <td onClick={daDat ? null : () => {
             this.props.handleAddChair(item)
@@ -36,7 +35,7 @@ let mapDispatchToProps = (dispatch) => {
   return {
     handleAddChair: (chair) => {
       let action = {
-        type: ADD_TO_CHOOSELITST,
+        type: ADD_TO_CHOOSELIST,
         payload: chair
       }
       dispatch(action)
