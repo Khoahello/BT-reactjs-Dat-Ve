@@ -1,0 +1,2 @@
+export const ADD_TO_CHOOSELITST = "ADD_TO_CHOOSELITST"
+export const REMOVE_CHAIR = 'REMOVE_CHAIR'

@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 class ListChair extends Component {
   renderListChair = () => {
     return this.props.chairArr.map((item, index) => {
-      return <ItemChair handleShowDetail={this.props.handleShowDetail} item={item} key={index}/>
+      return <ItemChair handleAddChair={this.props.handleAddChair} item={item} key={index}/>
     })
   }
   render() {
