@@ -5,18 +5,18 @@ import { connect } from 'react-redux'
 class ChooseList extends Component {
   renderChooseList = () => {
     let {chooseList} = this.props
-    // console.log("🤣 ~ file: test test test", this.props.chooseList)
     return chooseList.map((item, index) => {
       let {soGhe, gia} = item
+      console.log('item: ', item);
       return (
         <tr key={index}>
-          <td>{soGhe}</td>
-          <td>{gia}</td>
+          <td className='text-lg' style={{color: "#fea500", fontFamily: "fontGame", fontWeight: "600", border: "1px solid white"}}>{soGhe}</td>
+          <td className='text-lg' style={{color: "#fea500", fontFamily: "fontGame", fontWeight: "600", border: "1px solid white"}}>{gia}</td>
           <td
-          style={{color: "red", fontFamily: "fontGame"}}
-          // onClick={() => {
-            //   this.props.handleRemove(index)
-            // }}
+          style={{color: "red", fontFamily: "fontGame", fontWeight: "600", border: "1px solid white", cursor: "pointer"}}
+          onClick={() => {
+              this.props.handleRemove(item)
+            }}
             >X</td>
           </tr>
         )
@@ -41,15 +41,15 @@ class ChooseList extends Component {
         </div>
         <table style={{width: "100%"}}>
           <tr>
-            <th className='bookingMovie text-lg'>Số ghế</th>
-            <th className='bookingMovie text-lg'>Giá</th>
-            <th className='bookingMovie text-lg'>Hủy</th>
+            <th className='bookingMovie text-lg' style={{border: "1px solid white"}}>Số ghế</th>
+            <th className='bookingMovie text-lg' style={{border: "1px solid white"}}>Giá</th>
+            <th className='bookingMovie text-lg' style={{border: "1px solid white"}}>Hủy</th>
           </tr>
           {this.renderChooseList()}
           <tr>
-            <th className='bookingMovie text-lg'>Tổng</th>
-            <td>...</td>
-            <td></td>
+            <th className='bookingMovie text-lg' style={{border: "1px solid white"}}>Tổng</th>
+            <td style={{border: "1px solid white"}}>...</td>
+            <td style={{border: "1px solid white"}}></td>
           </tr>
         </table>
       </div>
