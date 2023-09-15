@@ -33,21 +33,6 @@ class ListChair extends Component {
                     <td className='rowNumber'>12</td>
                 </tr>
                 {this.renderListChair()}
-                {/* <tr>
-                    <td className='firstChar'>A</td>
-                    <td className="ghe">1</td>
-                    <td className="ghe">1</td>
-                    <td className="ghe">1</td>
-                    <td className="ghe">1</td>
-                    <td className="ghe">1</td>
-                    <td className="ghe">1</td>
-                    <td className="ghe">1</td>
-                    <td className="ghe">1</td>
-                    <td className="ghe">1</td>
-                    <td className="ghe">1</td>
-                    <td className="ghe">1</td>
-                    <td className="ghe">1</td>
-                </tr> */}
                 </tbody>
             </table>
         </div>
