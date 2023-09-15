@@ -4,10 +4,10 @@ import { connect } from 'react-redux'
 
 class ChooseList extends Component {
   renderChooseList = () => {
-      let {chooseList} = this.props
-      // console.log("🤣 ~ file: ChooseList.js:8 ~ ChooseList ~ {chooselist}:", {chooselist})
-      return chooseList.map((item, index) => {
-        let {soGhe, gia} = item
+    let {chooseList} = this.props
+    // console.log("🤣 ~ file: test test test", this.props.chooseList)
+    return chooseList.map((item, index) => {
+      let {soGhe, gia} = item
       return (
         <tr key={index}>
           <td>{soGhe}</td>

@@ -9,6 +9,7 @@ class ListChair extends Component {
     })
   }
   render() {
+    console.log("renderLIsst HCaiisi",this.props.chooseList);
     return (
       <div className='col-7'>
         <h3 className='bookingMovie'>Đặt vé xem phim</h3>
