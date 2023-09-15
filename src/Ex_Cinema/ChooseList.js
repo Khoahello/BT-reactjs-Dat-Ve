@@ -23,12 +23,12 @@ class ChooseList extends Component {
     }
     render() {
       let tongGia = 0
-      this.props.chooseList.map((item, index) => {
+      this.props.chooseList.map((item) => {
         tongGia = tongGia + item.gia
       })
     return (
-      <div className='col-5'>
-        <h3 className="bookingMovie">Danh sách ghế bạn chọn</h3>
+      <div className='col-4'>
+        <h3 className="bookingMovie mt-5">Danh sách ghế bạn chọn</h3>
         <div className="row py-1">
           <div style={{width: "30px", height: "30px", backgroundColor: "orange"}}></div>
           <h5 className='mx-2 bookingMovie'>Ghế đã đặt</h5>

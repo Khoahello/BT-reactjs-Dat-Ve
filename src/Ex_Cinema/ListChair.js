@@ -11,11 +11,11 @@ class ListChair extends Component {
   render() {
     console.log("renderLIsst HCaiisi",this.props.chooseList);
     return (
-      <div className='col-7'>
-        <h3 className='bookingMovie'>Đặt vé xem phim</h3>
-        <div className="screen">Màn hình</div>
+      <div className='col-8'>
+        <h3 className='bookingMovie mt-3 text-3xl' style={{color: "orange"}}>ĐẶT VÉ XEM PHIM CYPERLEARN.VN</h3>
+        <div className="screen ml-2">Màn hình</div>
         <div>
-            <table>
+            <table className='ml-4'>
                 <tbody>
                 <tr>
                     <td />
